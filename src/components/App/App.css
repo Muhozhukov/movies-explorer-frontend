@@ -1,0 +1,7 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  background-color: #202020;
+  color: white;
+  font-family: Inter;
+}

@@ -1,0 +1,81 @@
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.movie-card__image {
+  object-fit: cover;
+  width: 360px;
+  height: 201px;
+  object-position: center;
+  object-fit: cover;
+}
+
+.movie-card__saved-icon{
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+.movie-card__description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.movie-card__title {
+  max-width: 250px;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.movie-card__duration-container {
+  width: 52px;
+  height: 18px;
+  align-self: flex-start;
+  background-color: #2F2F2F;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-card__duration {
+  margin: 0;
+  text-align: center;
+  font-size: 11px;
+  line-height: 10px;
+  color: #8B8B8B;
+}
+
+@media screen and (max-width: 1279px) {
+  .movie-card__image {
+    height: 190px;
+    width: 339px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .movie-card__image {
+    height: 168px;
+    width: 300px;
+  }
+  .movie-card__title {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .movie-card__duration {
+    font-size: 11px;
+    line-height: 10px;
+  }
+}

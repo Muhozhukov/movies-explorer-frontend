@@ -1,0 +1,125 @@
+.profile__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 74px;
+  height: calc(100vh - (74px + 56px));
+}
+
+.profile__hello {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  margin: 0;
+}
+
+.profile__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+  margin-bottom: 220px;
+}
+
+.profile__label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.profile__input-title {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: left;
+}
+
+.profile__input {
+  height: 50px;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: right;
+  color: white;
+  width: 410px;
+  background-color: inherit;
+  border: none;
+}
+
+.profile__input:focus{
+  outline: none;
+}
+
+.profile__brake-line {
+  border-color: #424242;
+  border-top: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-width: 1px;
+}
+
+.profile__buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__submit-button {
+  margin-bottom: 16px;
+  border: none;
+  background-color: inherit;
+  width: 410px;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+
+.profile__exit-button {
+  border: none;
+  background-color: inherit;
+  width: 410px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #EE3465;
+}
+
+@media screen and (max-width: 1279px) {
+
+}
+@media screen and (max-width: 767px) {
+  .profile__container {
+    padding-bottom: 40px;
+    height: calc(100vh - (40px + 70px + 60px));
+    justify-content: space-between;
+  }
+  .profile__form {
+    width: 81.25vw;
+    margin-top: 80px;
+  }
+  .profile__hello {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .profile__input-title {
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .profile__label {
+    justify-content: space-between;
+  }
+  .profile__input {
+    font-size: 11px;
+    line-height: 13px;
+    width: 69vw;
+  }
+  .profile__submit-button {
+    width: 100vw;
+  }
+  .profile__exit-button {
+    width: 100vw;
+  }
+}

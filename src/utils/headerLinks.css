@@ -1,0 +1,123 @@
+.header__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  align-self: flex-end;
+}
+
+.header__links-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: calc(50% - 226px);
+}
+
+.header__link {
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0;
+  color: white;
+}
+
+.header__link-container {
+  text-decoration: none;
+}
+
+.promo__link-container {
+  color: white;
+  text-decoration: none;
+  align-self: center;
+}
+
+.promo__signup {
+  margin: 0;
+  align-self: center;
+  cursor: pointer;
+}
+
+.promo__signin {
+  color: black;
+  margin-top: 8px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.promo__links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: white;
+}
+
+.promo__signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 76px;
+  height: 32px;
+  background-color: #3DDC84;
+  border-radius: 3%;
+  margin: 0;
+  margin-left: 30px;
+}
+@media screen and (max-width: 1279px) {
+  .header__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-end;
+    padding-top: 15vh;
+    padding-bottom: 90px;
+    justify-content: space-between;
+    width: 67vw;
+    height: 100vh;
+    position: relative;
+    z-index: 11;
+    background-color: #202020;
+  }
+  .header__links-container {
+    flex-direction: column;
+  }
+  .header__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 28px;
+    margin-bottom: 4px;
+  }
+  .header__link:first-of-type {
+    margin-right: 0;
+  }
+  .header__link_active {
+    border-bottom: 2px solid #FFF;
+  }
+}
+@media screen and (max-width: 767px) {
+  .promo__signup {
+    font-size: 10px;
+  }
+  .promo__signin {
+    font-size: 10px;
+  }
+  .promo__signin-container {
+    width: 54px;
+    height: 26px;
+    margin-left: 14px;
+  }
+  .header__links {
+    width: 100vw;
+  }
+  .header__links-container {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__link_hidden {
+    display: none;
+  }
+}
