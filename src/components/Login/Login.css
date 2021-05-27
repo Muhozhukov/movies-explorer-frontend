@@ -1,0 +1,140 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 400px;
+  padding-top: 70px;
+  margin: 0 auto 0;
+  height: calc(100vh - 70px);
+}
+
+.login__logo {
+  width: 38px;
+  height: 38px;
+}
+
+.login__hello {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 40px 0;
+}
+
+.login__form {
+  width: 100%;
+  padding-bottom: 65px;
+}
+
+.login__input-title {
+  margin: 0;
+  margin-bottom: 5px;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: #8B8B8B;
+}
+
+.login__input {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  width: 100%;
+  border: none;
+  background-color: inherit;
+  color: white;
+  height: 35px;
+  border-bottom: 1px solid #424242;
+}
+
+.login__input:focus {
+  outline: none;
+  border-color: #4285F4;
+}
+
+.login__error-input {
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: #EE3465;
+  opacity: 0;
+}
+
+.login__submit-button {
+  width: 100%;
+  height: 45px;
+  border-radius: 3px;
+  margin-top: 69px;
+  border: none;
+  background-color: #4285F4;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: white;
+  transition: .3s;
+}
+
+.login__submit-button:hover {
+  background-color: #86b0f3;
+  cursor: pointer;
+}
+
+.login__redirect-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 16px auto 0;
+}
+
+.login__redirect-text {
+  margin: 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #8B8B8B;
+}
+
+.login__redirect-link {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #4285F4;
+  background-color: inherit;
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 4px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1280px) {
+  .login {
+    padding-top: 232px;
+    height: calc(100vh - 232px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .login__logo {
+    align-self: center;
+  }
+  .login {
+    padding-top: 56px;
+    width: 80vw;
+    height: calc(100vh - 56px);
+  }
+  .login__hello {
+    align-self: center;
+  }
+  .login__redirect-text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .login__redirect-link {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

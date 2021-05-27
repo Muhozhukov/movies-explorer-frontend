@@ -1,0 +1,130 @@
+.Promo {
+  background-color: #073042;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Inter;
+  color: white;
+  padding: 0 70px 75px;
+}
+
+.promo__container {
+  width: 100%;
+  margin-top: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1140px;
+  align-self: center;
+}
+
+.promo__flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.promo__title {
+  font-size: 50px;
+  line-height: 58px;
+  font-weight: 400;
+  max-width: 640px;
+  text-align: left;
+  margin: 0;
+}
+
+.promo__subtitle {
+  margin-top: 36px;
+  font-size: 13px;
+  line-height: 15.73px;
+  font-weight: 400;
+  color: #ffffff;
+  opacity: .5;
+  text-align: left;
+  max-width: 310px;
+}
+
+.promo__button-container {
+  text-align: left;
+  width: 129px;
+  height: 36px;
+  margin-top: 146px;
+}
+
+.promo__button {
+  width: 129px;
+  height: 36px;
+  background-color: inherit;
+  border-radius: 3px;
+  opacity: 0.6;
+  border: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}
+
+.promo__landing-logo {
+  height: 304px;
+}
+
+@media screen and (max-width: 1280px) {
+  .Promo {
+    padding: 0 30px 76px;
+  }
+  .promo__container {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 140px;
+  }
+  .promo__flex-container {
+    align-items: center;
+  }
+  .promo__title {
+    font-size: 40px;
+    line-height: 50px;
+    margin: 0;
+    margin-top: 48px;
+    text-align: center;
+    max-width: 680px;
+  }
+  .promo__title-brake {
+    display: none;
+  }
+  .promo__subtitle {
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    margin-top: 22px;
+  }
+  .promo__button-container {
+    margin-top: 92px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Promo {
+    padding: 0 10px 30px;
+  }
+  .promo__container {
+    margin-top: 88px;
+  }
+  .promo__landing-logo {
+    width: 210px;
+    height: 206px;
+  }
+  .promo__title {
+    font-size: 30px;
+    line-height: 38px;
+    margin-top: 44px;
+    letter-spacing: -.04em;
+  }
+  .promo__subtitle {
+    margin-top: 24px;
+  }
+  .promo__button-container {
+    margin-top: 80px;
+  }
+}

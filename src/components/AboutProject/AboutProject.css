@@ -1,0 +1,134 @@
+.about__container {
+  background-color: #202020;
+  color: white;
+  font-family: Inter;
+  padding: 110px 70px 110px;
+  scroll-behavior: smooth;
+  max-width: 1140px;
+  align-self: center;
+}
+
+.about__flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 70px 0 110px;
+}
+
+.about__describing {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+}
+
+.about__subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24.2px;
+  letter-spacing: -.04em;
+  margin: 0;
+}
+
+.about__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  margin-top: 26px;
+
+}
+
+.about__timing {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.about__timing-frontend {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+.about__timing-frontend-block {
+  height: 36px;
+  background-color: #3DDC84;
+  transition: .2s;
+  color: black;
+}
+
+.about__timing-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  margin: 0;
+  margin-top: 9px;
+}
+
+.about__timing-subtitle {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #8B8B8B;
+}
+
+.about__timing-backend {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about__timing-backend-block {
+  height: 36px;
+  background-color: #303030;
+  transition: .2s;
+}
+
+@media screen and (max-width: 1280px) {
+  .about__container {
+    padding: 90px 50px 90px;
+  }
+  .about__describing {
+    margin-right: 30px;
+  }
+  .about__text{
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about__container {
+    padding: 70px 18px;
+  }
+  .about__subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.04em;
+  }
+  .about__text {
+    font-size: 11px;
+    line-height: 16px;
+    margin-top: 16px;
+  }
+  .about__flex-container {
+    flex-direction: column;
+    margin: 60px 0 4px;
+  }
+  .about__describing {
+    margin: 0;
+    margin-bottom: 56px;
+  }
+  .about__timing-text {
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .about__timing-subtitle {
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .about__timing-frontend {
+    width: 40%;
+  }
+}
