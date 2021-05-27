@@ -8,7 +8,7 @@ function Movies(props) {
     <>
       <Header></Header>
       <SearchForm></SearchForm>
-      <MoviesCardList></MoviesCardList>
+      <MoviesCardList myFilm={true}></MoviesCardList>
       <Footer></Footer>
     </>
   )

@@ -12,6 +12,45 @@
   height: 201px;
   object-position: center;
   object-fit: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.movie-card__image:hover {
+  cursor: pointer;
+}
+
+.movie-card__save-button {
+  margin: 0;
+  padding: 0;
+  height: 21px;
+  width: 72px;
+  background-color: #313131;
+  border-radius: 30px;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 5;
+  border: none;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 9px;
+  text-align: center;
+  color: #FFF;
+  transition: .2s;
+  font-family: Inter;
+}
+
+.movie-card__save-button:hover {
+  background-color: #525252;
+  cursor: pointer;
+}
+
+.movie-card:hover .movie-card__save-button {
+  opacity: 1;
+  visibility: visible;
 }
 
 .movie-card__saved-icon{
@@ -77,5 +116,9 @@
   .movie-card__duration {
     font-size: 11px;
     line-height: 10px;
+  }
+  .movie-card__save-button {
+    top: 10px;
+    right: 10px;
   }
 }

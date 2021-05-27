@@ -59,7 +59,7 @@
   border: none;
   background-color: #4285F4;
   height: 34px;
-  width: 34px;
+  min-width: 34px;
   padding: 0;
   cursor: pointer;
   transition: .3s;
