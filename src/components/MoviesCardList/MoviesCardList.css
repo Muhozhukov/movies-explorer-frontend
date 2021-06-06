@@ -6,8 +6,13 @@
   width: 90vw;
   max-width: 1280px;
   align-self: center;
+  min-height: calc(100vh - 56px - 223px - 172px - 70px);
 }
-
+.movies__not-finding-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+}
 .movies__container {
   display: grid;
   width: 100%;
@@ -45,6 +50,9 @@
     grid-template-columns: repeat(auto-fit, 339px);
     grid-row-gap: 47px;
   }
+  .movies {
+    min-height: calc(100vh - 56px - 273px - 173px - 70px);
+  }
 }
 @media screen and (max-width: 767px) {
   .movies__container {
@@ -53,5 +61,6 @@
   }
   .movies {
     padding: 40px 10px 0;
+    min-height: calc(100vh - 56px - 272px - 283px - 40px);
   }
 }
