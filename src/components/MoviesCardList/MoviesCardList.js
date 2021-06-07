@@ -55,7 +55,6 @@ function MoviesCardList(props) {
         if (props.checked && movie.duration > 40) {
           return [];
         } else {
-          console.log(movie)
           return (<MoviesCard
           savedMovies={props.savedMovies}
           movie={movie} key={savedMoviesMatch ? movie.movieId : movie.id}
