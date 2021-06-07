@@ -62,26 +62,6 @@ class Api {
     })
     .then(this._handleOriginalResponse)
   }
-  likeToCard(cardId, jwt) {
-    return fetch(`${this.baseUrl}/cards/${cardId}/likes`, {
-      method: 'PUT',
-      headers: {
-        authorization: `Bearer ${jwt}`,
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(this._handleOriginalResponse)
-  }
-  deleteLikeToCard(cardId, jwt) {
-    return fetch(`${this.baseUrl}/cards/${cardId}/likes`, {
-      method: 'DELETE',
-      headers: {
-        authorization: `Bearer ${jwt}`,
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(this._handleOriginalResponse)
-  }
   deleteMovie(movieId, jwt) {
     return fetch(`${this.baseUrl}/movies/${movieId}`, {
       method: 'DELETE',
@@ -95,7 +75,7 @@ class Api {
 }
 //123
 const api = new Api({
-  baseUrl: 'http://localhost:3000',
+  baseUrl: 'https://backend.movie-explorer.nomoredomains.icu',
   headers: {
     'Content-Type': 'application/json'
   }

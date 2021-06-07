@@ -1,8 +1,10 @@
 import React from 'react';
+import { useRouteMatch } from "react-router-dom";
 import './MoviesCardList.css';
 import MoviesCard from '../MoviesCard/MoviesCard';
 
 function MoviesCardList(props) {
+  const savedMoviesMatch = useRouteMatch("/saved-movies");
   // количество отображаемых фильмов при поиске
   const [index, setIndex] = React.useState(12);
   // определение разрешения экрана
@@ -53,9 +55,10 @@ function MoviesCardList(props) {
         if (props.checked && movie.duration > 40) {
           return [];
         } else {
+          console.log(movie)
           return (<MoviesCard
           savedMovies={props.savedMovies}
-          movie={movie} key={movie.id}
+          movie={movie} key={savedMoviesMatch ? movie.movieId : movie.id}
           movies={props.movies}
           saveMovie={(data) => props.saveMovie(data)}
           deleteMovie={(movieId) => props.deleteMovie(movieId)}

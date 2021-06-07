@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:3000';
+export const BASE_URL = 'https://backend.movie-explorer.nomoredomains.icu';
 function handleOriginalResponse(res)  {
   if(res.ok) {return res.json()}
     return Promise.reject(`Ошибка: ${res.status}`);
