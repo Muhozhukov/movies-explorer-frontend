@@ -59,7 +59,8 @@ function Profile(props) {
                 type="email"
                 id="email"
                 name="email"
-                value={profileFormValidator.values.email} />
+                value={profileFormValidator.values.email}
+                required />
             </div>
             <span
               className="profile__error-input"

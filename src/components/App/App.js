@@ -21,7 +21,9 @@ function App() {
   const [isLoading, setIsLoading] = React.useState(false);
   const [movies, setMovies] = React.useState([]);
   const [searchedMovies, setSearchedMovies] = React.useState([]);
+  const [localMovies, setLocalMovies] = React.useState([]);
   const [searchedSavedMovies, setSearchedSavedMovies] = React.useState([]);
+  const [localSavedMovies, setLocalSavedMovies] = React.useState([]);
   const [savedMovies, setSavedMovies] = React.useState([]);
   // Чекбокс на короткометражки
   const [checked, setChecked] = React.useState(false)
@@ -100,6 +102,8 @@ function App() {
   // logout пользователя
   const handleSignOut = () => {
     localStorage.removeItem('jwt');
+    localStorage.removeItem('searchedMovies');
+    localStorage.removeItem('searchedSavedMovies');
     setLoggedIn(false);
     history.push('/');
   }
@@ -132,40 +136,38 @@ function App() {
   // Выдача найденного из массива фильма
   function searchMovie(data) {
     setSearchedMovies(data);
-    const moviesToString = JSON.stringify(searchedMovies);
+    const moviesToString = JSON.stringify(data);
     localStorage.setItem('searchedMovies', moviesToString);
   }
+
+  // Отрисовка фильмов
+  React.useEffect(() => {
+    const movies = JSON.parse(localStorage.getItem('searchedMovies'));
+    if (!movies) {
+      setLocalMovies([])
+    } else {
+      setLocalMovies(movies); // localMovies - пропс, передается на отрисовку
+    }
+
+    }, [searchedMovies])
+
   // Выдача найденного фильма из сохраненных фильмов
   function searchSavedMovie (data) {
-    const localSearchedMovies = JSON.stringify(searchedSavedMovies)
     setSearchedSavedMovies(data);
-    const moviesToString = localSearchedMovies;
-    localStorage.setItem('searchedSavedMovies', moviesToString);
+    const localSearchedMovies = JSON.stringify(data)
+    localStorage.setItem('searchedSavedMovies', localSearchedMovies)
   }
-  // Выдача фильмов из локалСторэдж, либо найденных
-function showSearchedMovies() {
-  const localSavedMovies = JSON.parse(localStorage.getItem('searchedSavedMovies'));
-  if (searchedSavedMovies.length > 0) {
-    return searchedSavedMovies;
-  }
-  else if (!localSavedMovies) {
-    return savedMovies;
-  } else if (localSavedMovies.length > 0) {
-    return localSavedMovies;
-  } else {
-    return savedMovies;
-  }
-}
-function showLocalStorageMovies() {
-  const localSearchedMovies = JSON.parse(localStorage.getItem('searchedMovies'));
-  if (!localSearchedMovies) {
-    return [];
-  } else if (localSearchedMovies.length > 0) {
-    return localSearchedMovies;
-  } else {
-    return [];
-  }
-}
+
+  // Отрисовка сохраненных фильмов
+  React.useEffect(() => {
+    const movies = JSON.parse(localStorage.getItem('searchedSavedMovies'));
+    if (!movies) {
+      setLocalSavedMovies(savedMovies);
+    } else {
+      setLocalSavedMovies(movies); // localMovies - пропс, передается на отрисовку
+    }
+  }, [searchedSavedMovies, savedMovies])
+
   // Сохранение фильма
   function saveMovie(movie) {
     const jwt = getJwt();
@@ -225,7 +227,7 @@ function showLocalStorageMovies() {
           deleteMovie={deleteMovie}
           searchMovie={searchMovie}
           movies={movies}
-          searchedMovies={showLocalStorageMovies()}
+          searchedMovies={localMovies}
           savedMovies={savedMovies}
           component={Movies}>
         </ProtectedRoute>
@@ -235,7 +237,7 @@ function showLocalStorageMovies() {
           checked={checked}
           setCheckboxOn={setCheckboxOn}
           setCheckboxOff={setCheckboxOff}
-          movies={showSearchedMovies()}
+          movies={savedMovies}
           searchedSavedMovies={searchedSavedMovies}
           deleteMovie={deleteMovie}
           searchMovie={searchSavedMovie}
