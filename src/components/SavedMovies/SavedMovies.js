@@ -11,8 +11,18 @@ function Movies(props) {
         open={props.onOpenBurger}
         close={props.closeBurgerMenu}>
       </Header>
-      <SearchForm></SearchForm>
-      <MoviesCardList myFilm={true}></MoviesCardList>
+      <SearchForm
+        movies={props.movies}
+        savedMovies={props.savedMovies}
+        setCheckboxOn={props.setCheckboxOn}
+        setCheckboxOff={props.setCheckboxOff}
+        searchSavedMovies={props.searchedSavedMovies}
+        searchMovie={(movies) => props.searchMovie(movies)}></SearchForm>
+      <MoviesCardList
+        movies={props.movies}
+        deleteMovie={props.deleteMovie}
+        checked={props.checked}
+        myFilm={true}></MoviesCardList>
       <Footer></Footer>
     </>
   )

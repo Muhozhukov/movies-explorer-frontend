@@ -2,6 +2,15 @@
   display: flex;
   flex-direction: column;
   background-color: #202020;
-  color: white;
+  color: #ffffff;
   font-family: Inter, Arial, Helvetica, sans-serif;
+}
+.App_dark {
+  background-color: black;
+  opacity: .3;
+}
+
+.App_normal {
+  background-color: #202020;
+  opacity: 1;
 }

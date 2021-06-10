@@ -59,6 +59,11 @@
   position: absolute;
   top: 14px;
   right: 14px;
+  transition: .2s;
+}
+.movie-card__saved-icon:hover {
+  opacity: .4;
+  cursor: pointer;
 }
 
 .movie-card__description {
